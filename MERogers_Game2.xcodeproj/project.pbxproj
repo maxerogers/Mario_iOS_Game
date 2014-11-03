@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF739FD11A06B87700CDC506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FD01A06B87700CDC506 /* main.m */; };
+		AF739FD41A06B87700CDC506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FD31A06B87700CDC506 /* AppDelegate.m */; };
+		AF739FD71A06B87700CDC506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FD61A06B87700CDC506 /* ViewController.m */; };
+		AF739FDA1A06B87700CDC506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF739FD81A06B87700CDC506 /* Main.storyboard */; };
+		AF739FDC1A06B87800CDC506 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF739FDB1A06B87800CDC506 /* Images.xcassets */; };
+		AF739FDF1A06B87800CDC506 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF739FDD1A06B87800CDC506 /* LaunchScreen.xib */; };
+		AF739FEB1A06B87800CDC506 /* MERogers_Game2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FEA1A06B87800CDC506 /* MERogers_Game2Tests.m */; };
+		AF73A0291A06B8BB00CDC506 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FF51A06B8BB00CDC506 /* brick.png */; };
+		AF73A02A1A06B8BB00CDC506 /* brick2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FF61A06B8BB00CDC506 /* brick2.png */; };
+		AF73A02B1A06B8BB00CDC506 /* brick3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FF71A06B8BB00CDC506 /* brick3.png */; };
+		AF73A02C1A06B8BB00CDC506 /* koopa_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FF81A06B8BB00CDC506 /* koopa_0.png */; };
+		AF73A02D1A06B8BB00CDC506 /* koopa_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FF91A06B8BB00CDC506 /* koopa_1.png */; };
+		AF73A02E1A06B8BB00CDC506 /* koopa_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FFA1A06B8BB00CDC506 /* koopa_2.png */; };
+		AF73A02F1A06B8BB00CDC506 /* koopa_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FFB1A06B8BB00CDC506 /* koopa_3.png */; };
+		AF73A0301A06B8BB00CDC506 /* luigi_attack_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FFC1A06B8BB00CDC506 /* luigi_attack_0.png */; };
+		AF73A0311A06B8BB00CDC506 /* luigi_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FFD1A06B8BB00CDC506 /* luigi_default.png */; };
+		AF73A0321A06B8BB00CDC506 /* luigi_duck_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FFE1A06B8BB00CDC506 /* luigi_duck_0.png */; };
+		AF73A0331A06B8BB00CDC506 /* luigi_run_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF739FFF1A06B8BB00CDC506 /* luigi_run_0.png */; };
+		AF73A0341A06B8BB00CDC506 /* luigi_run_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0001A06B8BB00CDC506 /* luigi_run_1.png */; };
+		AF73A0351A06B8BB00CDC506 /* luigi_run_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0011A06B8BB00CDC506 /* luigi_run_2.png */; };
+		AF73A0361A06B8BB00CDC506 /* luigi_run_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0021A06B8BB00CDC506 /* luigi_run_3.png */; };
+		AF73A0371A06B8BB00CDC506 /* luigi_run_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0031A06B8BB00CDC506 /* luigi_run_4.png */; };
+		AF73A0381A06B8BB00CDC506 /* luigi_run_5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0041A06B8BB00CDC506 /* luigi_run_5.png */; };
+		AF73A0391A06B8BB00CDC506 /* mario_attack_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0051A06B8BB00CDC506 /* mario_attack_0.png */; };
+		AF73A03A1A06B8BB00CDC506 /* mario_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0061A06B8BB00CDC506 /* mario_default.png */; };
+		AF73A03B1A06B8BB00CDC506 /* mario_duck_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0071A06B8BB00CDC506 /* mario_duck_0.png */; };
+		AF73A03C1A06B8BB00CDC506 /* mario_jump_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0081A06B8BB00CDC506 /* mario_jump_0.png */; };
+		AF73A03D1A06B8BB00CDC506 /* mario_run_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0091A06B8BB00CDC506 /* mario_run_0.png */; };
+		AF73A03E1A06B8BB00CDC506 /* mario_run_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A00A1A06B8BB00CDC506 /* mario_run_1.png */; };
+		AF73A03F1A06B8BB00CDC506 /* mario_run_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A00B1A06B8BB00CDC506 /* mario_run_2.png */; };
+		AF73A0401A06B8BB00CDC506 /* mario_run_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A00C1A06B8BB00CDC506 /* mario_run_3.png */; };
+		AF73A0411A06B8BB00CDC506 /* mario_run_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A00D1A06B8BB00CDC506 /* mario_run_4.png */; };
+		AF73A0421A06B8BB00CDC506 /* mario_run_5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A00E1A06B8BB00CDC506 /* mario_run_5.png */; };
+		AF73A0431A06B8BB00CDC506 /* shy_guy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A00F1A06B8BB00CDC506 /* shy_guy_0.png */; };
+		AF73A0441A06B8BB00CDC506 /* shy_guy_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0101A06B8BB00CDC506 /* shy_guy_1.png */; };
+		AF73A0451A06B8BB00CDC506 /* shy_guy_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0111A06B8BB00CDC506 /* shy_guy_2.png */; };
+		AF73A0461A06B8BB00CDC506 /* shy_guy_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0121A06B8BB00CDC506 /* shy_guy_3.png */; };
+		AF73A0471A06B8BB00CDC506 /* waluigi_attack_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0131A06B8BB00CDC506 /* waluigi_attack_0.png */; };
+		AF73A0481A06B8BB00CDC506 /* waluigi_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0141A06B8BB00CDC506 /* waluigi_default.png */; };
+		AF73A0491A06B8BB00CDC506 /* waluigi_duck_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0151A06B8BB00CDC506 /* waluigi_duck_0.png */; };
+		AF73A04A1A06B8BB00CDC506 /* waluigi_jump_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0161A06B8BB00CDC506 /* waluigi_jump_0.png */; };
+		AF73A04B1A06B8BB00CDC506 /* waluigi_run_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0171A06B8BB00CDC506 /* waluigi_run_0.png */; };
+		AF73A04C1A06B8BB00CDC506 /* waluigi_run_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0181A06B8BB00CDC506 /* waluigi_run_1.png */; };
+		AF73A04D1A06B8BB00CDC506 /* waluigi_run_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0191A06B8BB00CDC506 /* waluigi_run_2.png */; };
+		AF73A04E1A06B8BB00CDC506 /* waluigi_run_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A01A1A06B8BB00CDC506 /* waluigi_run_3.png */; };
+		AF73A04F1A06B8BB00CDC506 /* waluigi_run_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A01B1A06B8BB00CDC506 /* waluigi_run_4.png */; };
+		AF73A0501A06B8BB00CDC506 /* waluigi_run_5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A01C1A06B8BB00CDC506 /* waluigi_run_5.png */; };
+		AF73A0511A06B8BB00CDC506 /* wario_attack_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A01D1A06B8BB00CDC506 /* wario_attack_0.png */; };
+		AF73A0521A06B8BB00CDC506 /* wario_default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A01E1A06B8BB00CDC506 /* wario_default.png */; };
+		AF73A0531A06B8BB00CDC506 /* wario_die_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A01F1A06B8BB00CDC506 /* wario_die_0.png */; };
+		AF73A0541A06B8BB00CDC506 /* wario_duck_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0201A06B8BB00CDC506 /* wario_duck_0.png */; };
+		AF73A0551A06B8BB00CDC506 /* wario_jump_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0211A06B8BB00CDC506 /* wario_jump_0.png */; };
+		AF73A0561A06B8BB00CDC506 /* wario_jump_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0221A06B8BB00CDC506 /* wario_jump_1.png */; };
+		AF73A0571A06B8BB00CDC506 /* wario_run_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0231A06B8BB00CDC506 /* wario_run_0.png */; };
+		AF73A0581A06B8BB00CDC506 /* wario_run_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0241A06B8BB00CDC506 /* wario_run_1.png */; };
+		AF73A0591A06B8BB00CDC506 /* wario_run_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0251A06B8BB00CDC506 /* wario_run_2.png */; };
+		AF73A05A1A06B8BB00CDC506 /* wario_run_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0261A06B8BB00CDC506 /* wario_run_3.png */; };
+		AF73A05B1A06B8BB00CDC506 /* wario_run_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0271A06B8BB00CDC506 /* wario_run_4.png */; };
+		AF73A05C1A06B8BB00CDC506 /* wario_run_5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0281A06B8BB00CDC506 /* wario_run_5.png */; };
+		AF73A0651A06B9BA00CDC506 /* Mario.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A05F1A06B9BA00CDC506 /* Mario.m */; };
+		AF73A0661A06B9BA00CDC506 /* Wario.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A0601A06B9BA00CDC506 /* Wario.m */; };
+		AF73A0671A06B9BA00CDC506 /* Luigi.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A0621A06B9BA00CDC506 /* Luigi.m */; };
+		AF73A0681A06B9BA00CDC506 /* Waluigi.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A0641A06B9BA00CDC506 /* Waluigi.m */; };
+		AF73A06B1A06BA5200CDC506 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A06A1A06BA5200CDC506 /* GameView.m */; };
+		AF73A06E1A06DD4600CDC506 /* Koopa.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A06D1A06DD4600CDC506 /* Koopa.m */; };
+		AF73A0711A06EC0F00CDC506 /* ShyGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A0701A06EC0F00CDC506 /* ShyGuy.m */; };
+		AF73A0741A06EE8D00CDC506 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A0731A06EE8D00CDC506 /* Tile.m */; };
+		AF73A0771A06F68400CDC506 /* Brick.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A0761A06F68400CDC506 /* Brick.m */; };
+		AF73A0791A07177800CDC506 /* smw-bg-hills.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A0781A07177800CDC506 /* smw-bg-hills.png */; };
+		AF73A07B1A0719E800CDC506 /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A07A1A0719E800CDC506 /* grass.png */; };
+		AF73A07D1A071A3D00CDC506 /* grass2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A07C1A071A3D00CDC506 /* grass2.png */; };
+		AF73A0801A071BFE00CDC506 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A07F1A071BFE00CDC506 /* Player.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF739FE51A06B87800CDC506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF739FC31A06B87700CDC506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF739FCA1A06B87700CDC506;
+			remoteInfo = MERogers_Game2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF739FCB1A06B87700CDC506 /* MERogers_Game2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MERogers_Game2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF739FCF1A06B87700CDC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF739FD01A06B87700CDC506 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF739FD21A06B87700CDC506 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF739FD31A06B87700CDC506 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF739FD51A06B87700CDC506 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF739FD61A06B87700CDC506 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF739FD91A06B87700CDC506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF739FDB1A06B87800CDC506 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF739FDE1A06B87800CDC506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AF739FE41A06B87800CDC506 /* MERogers_Game2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MERogers_Game2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF739FE91A06B87800CDC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF739FEA1A06B87800CDC506 /* MERogers_Game2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MERogers_Game2Tests.m; sourceTree = "<group>"; };
+		AF739FF51A06B8BB00CDC506 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
+		AF739FF61A06B8BB00CDC506 /* brick2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick2.png; sourceTree = "<group>"; };
+		AF739FF71A06B8BB00CDC506 /* brick3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick3.png; sourceTree = "<group>"; };
+		AF739FF81A06B8BB00CDC506 /* koopa_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koopa_0.png; sourceTree = "<group>"; };
+		AF739FF91A06B8BB00CDC506 /* koopa_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koopa_1.png; sourceTree = "<group>"; };
+		AF739FFA1A06B8BB00CDC506 /* koopa_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koopa_2.png; sourceTree = "<group>"; };
+		AF739FFB1A06B8BB00CDC506 /* koopa_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koopa_3.png; sourceTree = "<group>"; };
+		AF739FFC1A06B8BB00CDC506 /* luigi_attack_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_attack_0.png; sourceTree = "<group>"; };
+		AF739FFD1A06B8BB00CDC506 /* luigi_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_default.png; sourceTree = "<group>"; };
+		AF739FFE1A06B8BB00CDC506 /* luigi_duck_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_duck_0.png; sourceTree = "<group>"; };
+		AF739FFF1A06B8BB00CDC506 /* luigi_run_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_run_0.png; sourceTree = "<group>"; };
+		AF73A0001A06B8BB00CDC506 /* luigi_run_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_run_1.png; sourceTree = "<group>"; };
+		AF73A0011A06B8BB00CDC506 /* luigi_run_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_run_2.png; sourceTree = "<group>"; };
+		AF73A0021A06B8BB00CDC506 /* luigi_run_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_run_3.png; sourceTree = "<group>"; };
+		AF73A0031A06B8BB00CDC506 /* luigi_run_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_run_4.png; sourceTree = "<group>"; };
+		AF73A0041A06B8BB00CDC506 /* luigi_run_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi_run_5.png; sourceTree = "<group>"; };
+		AF73A0051A06B8BB00CDC506 /* mario_attack_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_attack_0.png; sourceTree = "<group>"; };
+		AF73A0061A06B8BB00CDC506 /* mario_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_default.png; sourceTree = "<group>"; };
+		AF73A0071A06B8BB00CDC506 /* mario_duck_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_duck_0.png; sourceTree = "<group>"; };
+		AF73A0081A06B8BB00CDC506 /* mario_jump_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_jump_0.png; sourceTree = "<group>"; };
+		AF73A0091A06B8BB00CDC506 /* mario_run_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_run_0.png; sourceTree = "<group>"; };
+		AF73A00A1A06B8BB00CDC506 /* mario_run_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_run_1.png; sourceTree = "<group>"; };
+		AF73A00B1A06B8BB00CDC506 /* mario_run_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_run_2.png; sourceTree = "<group>"; };
+		AF73A00C1A06B8BB00CDC506 /* mario_run_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_run_3.png; sourceTree = "<group>"; };
+		AF73A00D1A06B8BB00CDC506 /* mario_run_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_run_4.png; sourceTree = "<group>"; };
+		AF73A00E1A06B8BB00CDC506 /* mario_run_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario_run_5.png; sourceTree = "<group>"; };
+		AF73A00F1A06B8BB00CDC506 /* shy_guy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shy_guy_0.png; sourceTree = "<group>"; };
+		AF73A0101A06B8BB00CDC506 /* shy_guy_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shy_guy_1.png; sourceTree = "<group>"; };
+		AF73A0111A06B8BB00CDC506 /* shy_guy_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shy_guy_2.png; sourceTree = "<group>"; };
+		AF73A0121A06B8BB00CDC506 /* shy_guy_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shy_guy_3.png; sourceTree = "<group>"; };
+		AF73A0131A06B8BB00CDC506 /* waluigi_attack_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_attack_0.png; sourceTree = "<group>"; };
+		AF73A0141A06B8BB00CDC506 /* waluigi_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_default.png; sourceTree = "<group>"; };
+		AF73A0151A06B8BB00CDC506 /* waluigi_duck_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_duck_0.png; sourceTree = "<group>"; };
+		AF73A0161A06B8BB00CDC506 /* waluigi_jump_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_jump_0.png; sourceTree = "<group>"; };
+		AF73A0171A06B8BB00CDC506 /* waluigi_run_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_run_0.png; sourceTree = "<group>"; };
+		AF73A0181A06B8BB00CDC506 /* waluigi_run_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_run_1.png; sourceTree = "<group>"; };
+		AF73A0191A06B8BB00CDC506 /* waluigi_run_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_run_2.png; sourceTree = "<group>"; };
+		AF73A01A1A06B8BB00CDC506 /* waluigi_run_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_run_3.png; sourceTree = "<group>"; };
+		AF73A01B1A06B8BB00CDC506 /* waluigi_run_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_run_4.png; sourceTree = "<group>"; };
+		AF73A01C1A06B8BB00CDC506 /* waluigi_run_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waluigi_run_5.png; sourceTree = "<group>"; };
+		AF73A01D1A06B8BB00CDC506 /* wario_attack_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_attack_0.png; sourceTree = "<group>"; };
+		AF73A01E1A06B8BB00CDC506 /* wario_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_default.png; sourceTree = "<group>"; };
+		AF73A01F1A06B8BB00CDC506 /* wario_die_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_die_0.png; sourceTree = "<group>"; };
+		AF73A0201A06B8BB00CDC506 /* wario_duck_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_duck_0.png; sourceTree = "<group>"; };
+		AF73A0211A06B8BB00CDC506 /* wario_jump_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_jump_0.png; sourceTree = "<group>"; };
+		AF73A0221A06B8BB00CDC506 /* wario_jump_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_jump_1.png; sourceTree = "<group>"; };
+		AF73A0231A06B8BB00CDC506 /* wario_run_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_run_0.png; sourceTree = "<group>"; };
+		AF73A0241A06B8BB00CDC506 /* wario_run_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_run_1.png; sourceTree = "<group>"; };
+		AF73A0251A06B8BB00CDC506 /* wario_run_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_run_2.png; sourceTree = "<group>"; };
+		AF73A0261A06B8BB00CDC506 /* wario_run_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_run_3.png; sourceTree = "<group>"; };
+		AF73A0271A06B8BB00CDC506 /* wario_run_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_run_4.png; sourceTree = "<group>"; };
+		AF73A0281A06B8BB00CDC506 /* wario_run_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wario_run_5.png; sourceTree = "<group>"; };
+		AF73A05D1A06B9BA00CDC506 /* Wario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wario.h; sourceTree = "<group>"; };
+		AF73A05E1A06B9BA00CDC506 /* Mario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mario.h; sourceTree = "<group>"; };
+		AF73A05F1A06B9BA00CDC506 /* Mario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mario.m; sourceTree = "<group>"; };
+		AF73A0601A06B9BA00CDC506 /* Wario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wario.m; sourceTree = "<group>"; };
+		AF73A0611A06B9BA00CDC506 /* Luigi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Luigi.h; sourceTree = "<group>"; };
+		AF73A0621A06B9BA00CDC506 /* Luigi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Luigi.m; sourceTree = "<group>"; };
+		AF73A0631A06B9BA00CDC506 /* Waluigi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waluigi.h; sourceTree = "<group>"; };
+		AF73A0641A06B9BA00CDC506 /* Waluigi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waluigi.m; sourceTree = "<group>"; };
+		AF73A0691A06BA5200CDC506 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameView.h; path = ../GameView.h; sourceTree = "<group>"; };
+		AF73A06A1A06BA5200CDC506 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameView.m; path = ../GameView.m; sourceTree = "<group>"; };
+		AF73A06C1A06DD4600CDC506 /* Koopa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Koopa.h; sourceTree = "<group>"; };
+		AF73A06D1A06DD4600CDC506 /* Koopa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Koopa.m; sourceTree = "<group>"; };
+		AF73A06F1A06EC0F00CDC506 /* ShyGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShyGuy.h; sourceTree = "<group>"; };
+		AF73A0701A06EC0F00CDC506 /* ShyGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShyGuy.m; sourceTree = "<group>"; };
+		AF73A0721A06EE8D00CDC506 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		AF73A0731A06EE8D00CDC506 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		AF73A0751A06F68400CDC506 /* Brick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brick.h; sourceTree = "<group>"; };
+		AF73A0761A06F68400CDC506 /* Brick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brick.m; sourceTree = "<group>"; };
+		AF73A0781A07177800CDC506 /* smw-bg-hills.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smw-bg-hills.png"; sourceTree = "<group>"; };
+		AF73A07A1A0719E800CDC506 /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		AF73A07C1A071A3D00CDC506 /* grass2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass2.png; sourceTree = "<group>"; };
+		AF73A07E1A071BFE00CDC506 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		AF73A07F1A071BFE00CDC506 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF739FC81A06B87700CDC506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF739FE11A06B87800CDC506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF739FC21A06B87700CDC506 = {
+			isa = PBXGroup;
+			children = (
+				AF739FF41A06B87C00CDC506 /* Resources */,
+				AF739FCD1A06B87700CDC506 /* MERogers_Game2 */,
+				AF739FE71A06B87800CDC506 /* MERogers_Game2Tests */,
+				AF739FCC1A06B87700CDC506 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF739FCC1A06B87700CDC506 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF739FCB1A06B87700CDC506 /* MERogers_Game2.app */,
+				AF739FE41A06B87800CDC506 /* MERogers_Game2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF739FCD1A06B87700CDC506 /* MERogers_Game2 */ = {
+			isa = PBXGroup;
+			children = (
+				AF73A07E1A071BFE00CDC506 /* Player.h */,
+				AF73A07F1A071BFE00CDC506 /* Player.m */,
+				AF73A0691A06BA5200CDC506 /* GameView.h */,
+				AF73A06A1A06BA5200CDC506 /* GameView.m */,
+				AF73A0721A06EE8D00CDC506 /* Tile.h */,
+				AF73A0731A06EE8D00CDC506 /* Tile.m */,
+				AF73A0751A06F68400CDC506 /* Brick.h */,
+				AF73A0761A06F68400CDC506 /* Brick.m */,
+				AF73A06C1A06DD4600CDC506 /* Koopa.h */,
+				AF73A06D1A06DD4600CDC506 /* Koopa.m */,
+				AF73A06F1A06EC0F00CDC506 /* ShyGuy.h */,
+				AF73A0701A06EC0F00CDC506 /* ShyGuy.m */,
+				AF73A05D1A06B9BA00CDC506 /* Wario.h */,
+				AF73A05E1A06B9BA00CDC506 /* Mario.h */,
+				AF73A05F1A06B9BA00CDC506 /* Mario.m */,
+				AF73A0601A06B9BA00CDC506 /* Wario.m */,
+				AF73A0611A06B9BA00CDC506 /* Luigi.h */,
+				AF73A0621A06B9BA00CDC506 /* Luigi.m */,
+				AF73A0631A06B9BA00CDC506 /* Waluigi.h */,
+				AF73A0641A06B9BA00CDC506 /* Waluigi.m */,
+				AF739FD21A06B87700CDC506 /* AppDelegate.h */,
+				AF739FD31A06B87700CDC506 /* AppDelegate.m */,
+				AF739FD51A06B87700CDC506 /* ViewController.h */,
+				AF739FD61A06B87700CDC506 /* ViewController.m */,
+				AF739FD81A06B87700CDC506 /* Main.storyboard */,
+				AF739FDB1A06B87800CDC506 /* Images.xcassets */,
+				AF739FDD1A06B87800CDC506 /* LaunchScreen.xib */,
+				AF739FCE1A06B87700CDC506 /* Supporting Files */,
+			);
+			path = MERogers_Game2;
+			sourceTree = "<group>";
+		};
+		AF739FCE1A06B87700CDC506 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF739FCF1A06B87700CDC506 /* Info.plist */,
+				AF739FD01A06B87700CDC506 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF739FE71A06B87800CDC506 /* MERogers_Game2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF739FEA1A06B87800CDC506 /* MERogers_Game2Tests.m */,
+				AF739FE81A06B87800CDC506 /* Supporting Files */,
+			);
+			path = MERogers_Game2Tests;
+			sourceTree = "<group>";
+		};
+		AF739FE81A06B87800CDC506 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF739FE91A06B87800CDC506 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF739FF41A06B87C00CDC506 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF73A07A1A0719E800CDC506 /* grass.png */,
+				AF73A07C1A071A3D00CDC506 /* grass2.png */,
+				AF739FF51A06B8BB00CDC506 /* brick.png */,
+				AF739FF61A06B8BB00CDC506 /* brick2.png */,
+				AF739FF71A06B8BB00CDC506 /* brick3.png */,
+				AF739FF81A06B8BB00CDC506 /* koopa_0.png */,
+				AF739FF91A06B8BB00CDC506 /* koopa_1.png */,
+				AF739FFA1A06B8BB00CDC506 /* koopa_2.png */,
+				AF739FFB1A06B8BB00CDC506 /* koopa_3.png */,
+				AF739FFC1A06B8BB00CDC506 /* luigi_attack_0.png */,
+				AF739FFD1A06B8BB00CDC506 /* luigi_default.png */,
+				AF739FFE1A06B8BB00CDC506 /* luigi_duck_0.png */,
+				AF739FFF1A06B8BB00CDC506 /* luigi_run_0.png */,
+				AF73A0001A06B8BB00CDC506 /* luigi_run_1.png */,
+				AF73A0011A06B8BB00CDC506 /* luigi_run_2.png */,
+				AF73A0781A07177800CDC506 /* smw-bg-hills.png */,
+				AF73A0021A06B8BB00CDC506 /* luigi_run_3.png */,
+				AF73A0031A06B8BB00CDC506 /* luigi_run_4.png */,
+				AF73A0041A06B8BB00CDC506 /* luigi_run_5.png */,
+				AF73A0051A06B8BB00CDC506 /* mario_attack_0.png */,
+				AF73A0061A06B8BB00CDC506 /* mario_default.png */,
+				AF73A0071A06B8BB00CDC506 /* mario_duck_0.png */,
+				AF73A0081A06B8BB00CDC506 /* mario_jump_0.png */,
+				AF73A0091A06B8BB00CDC506 /* mario_run_0.png */,
+				AF73A00A1A06B8BB00CDC506 /* mario_run_1.png */,
+				AF73A00B1A06B8BB00CDC506 /* mario_run_2.png */,
+				AF73A00C1A06B8BB00CDC506 /* mario_run_3.png */,
+				AF73A00D1A06B8BB00CDC506 /* mario_run_4.png */,
+				AF73A00E1A06B8BB00CDC506 /* mario_run_5.png */,
+				AF73A00F1A06B8BB00CDC506 /* shy_guy_0.png */,
+				AF73A0101A06B8BB00CDC506 /* shy_guy_1.png */,
+				AF73A0111A06B8BB00CDC506 /* shy_guy_2.png */,
+				AF73A0121A06B8BB00CDC506 /* shy_guy_3.png */,
+				AF73A0131A06B8BB00CDC506 /* waluigi_attack_0.png */,
+				AF73A0141A06B8BB00CDC506 /* waluigi_default.png */,
+				AF73A0151A06B8BB00CDC506 /* waluigi_duck_0.png */,
+				AF73A0161A06B8BB00CDC506 /* waluigi_jump_0.png */,
+				AF73A0171A06B8BB00CDC506 /* waluigi_run_0.png */,
+				AF73A0181A06B8BB00CDC506 /* waluigi_run_1.png */,
+				AF73A0191A06B8BB00CDC506 /* waluigi_run_2.png */,
+				AF73A01A1A06B8BB00CDC506 /* waluigi_run_3.png */,
+				AF73A01B1A06B8BB00CDC506 /* waluigi_run_4.png */,
+				AF73A01C1A06B8BB00CDC506 /* waluigi_run_5.png */,
+				AF73A01D1A06B8BB00CDC506 /* wario_attack_0.png */,
+				AF73A01E1A06B8BB00CDC506 /* wario_default.png */,
+				AF73A01F1A06B8BB00CDC506 /* wario_die_0.png */,
+				AF73A0201A06B8BB00CDC506 /* wario_duck_0.png */,
+				AF73A0211A06B8BB00CDC506 /* wario_jump_0.png */,
+				AF73A0221A06B8BB00CDC506 /* wario_jump_1.png */,
+				AF73A0231A06B8BB00CDC506 /* wario_run_0.png */,
+				AF73A0241A06B8BB00CDC506 /* wario_run_1.png */,
+				AF73A0251A06B8BB00CDC506 /* wario_run_2.png */,
+				AF73A0261A06B8BB00CDC506 /* wario_run_3.png */,
+				AF73A0271A06B8BB00CDC506 /* wario_run_4.png */,
+				AF73A0281A06B8BB00CDC506 /* wario_run_5.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF739FCA1A06B87700CDC506 /* MERogers_Game2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF739FEE1A06B87800CDC506 /* Build configuration list for PBXNativeTarget "MERogers_Game2" */;
+			buildPhases = (
+				AF739FC71A06B87700CDC506 /* Sources */,
+				AF739FC81A06B87700CDC506 /* Frameworks */,
+				AF739FC91A06B87700CDC506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MERogers_Game2;
+			productName = MERogers_Game2;
+			productReference = AF739FCB1A06B87700CDC506 /* MERogers_Game2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF739FE31A06B87800CDC506 /* MERogers_Game2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF739FF11A06B87800CDC506 /* Build configuration list for PBXNativeTarget "MERogers_Game2Tests" */;
+			buildPhases = (
+				AF739FE01A06B87800CDC506 /* Sources */,
+				AF739FE11A06B87800CDC506 /* Frameworks */,
+				AF739FE21A06B87800CDC506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF739FE61A06B87800CDC506 /* PBXTargetDependency */,
+			);
+			name = MERogers_Game2Tests;
+			productName = MERogers_Game2Tests;
+			productReference = AF739FE41A06B87800CDC506 /* MERogers_Game2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF739FC31A06B87700CDC506 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = maxrogers;
+				TargetAttributes = {
+					AF739FCA1A06B87700CDC506 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					AF739FE31A06B87800CDC506 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = AF739FCA1A06B87700CDC506;
+					};
+				};
+			};
+			buildConfigurationList = AF739FC61A06B87700CDC506 /* Build configuration list for PBXProject "MERogers_Game2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF739FC21A06B87700CDC506;
+			productRefGroup = AF739FCC1A06B87700CDC506 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF739FCA1A06B87700CDC506 /* MERogers_Game2 */,
+				AF739FE31A06B87800CDC506 /* MERogers_Game2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF739FC91A06B87700CDC506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF73A07B1A0719E800CDC506 /* grass.png in Resources */,
+				AF73A02D1A06B8BB00CDC506 /* koopa_1.png in Resources */,
+				AF73A0591A06B8BB00CDC506 /* wario_run_2.png in Resources */,
+				AF73A04B1A06B8BB00CDC506 /* waluigi_run_0.png in Resources */,
+				AF73A0411A06B8BB00CDC506 /* mario_run_4.png in Resources */,
+				AF73A0441A06B8BB00CDC506 /* shy_guy_1.png in Resources */,
+				AF73A0351A06B8BB00CDC506 /* luigi_run_2.png in Resources */,
+				AF73A0501A06B8BB00CDC506 /* waluigi_run_5.png in Resources */,
+				AF73A0581A06B8BB00CDC506 /* wario_run_1.png in Resources */,
+				AF73A04F1A06B8BB00CDC506 /* waluigi_run_4.png in Resources */,
+				AF73A0491A06B8BB00CDC506 /* waluigi_duck_0.png in Resources */,
+				AF73A03C1A06B8BB00CDC506 /* mario_jump_0.png in Resources */,
+				AF739FDA1A06B87700CDC506 /* Main.storyboard in Resources */,
+				AF73A0391A06B8BB00CDC506 /* mario_attack_0.png in Resources */,
+				AF73A0521A06B8BB00CDC506 /* wario_default.png in Resources */,
+				AF73A07D1A071A3D00CDC506 /* grass2.png in Resources */,
+				AF73A0461A06B8BB00CDC506 /* shy_guy_3.png in Resources */,
+				AF73A0401A06B8BB00CDC506 /* mario_run_3.png in Resources */,
+				AF73A03D1A06B8BB00CDC506 /* mario_run_0.png in Resources */,
+				AF73A05A1A06B8BB00CDC506 /* wario_run_3.png in Resources */,
+				AF73A02F1A06B8BB00CDC506 /* koopa_3.png in Resources */,
+				AF73A0301A06B8BB00CDC506 /* luigi_attack_0.png in Resources */,
+				AF73A0381A06B8BB00CDC506 /* luigi_run_5.png in Resources */,
+				AF73A0511A06B8BB00CDC506 /* wario_attack_0.png in Resources */,
+				AF73A0571A06B8BB00CDC506 /* wario_run_0.png in Resources */,
+				AF73A0371A06B8BB00CDC506 /* luigi_run_4.png in Resources */,
+				AF73A02B1A06B8BB00CDC506 /* brick3.png in Resources */,
+				AF73A04C1A06B8BB00CDC506 /* waluigi_run_1.png in Resources */,
+				AF73A0431A06B8BB00CDC506 /* shy_guy_0.png in Resources */,
+				AF73A04D1A06B8BB00CDC506 /* waluigi_run_2.png in Resources */,
+				AF73A0331A06B8BB00CDC506 /* luigi_run_0.png in Resources */,
+				AF73A05C1A06B8BB00CDC506 /* wario_run_5.png in Resources */,
+				AF73A0481A06B8BB00CDC506 /* waluigi_default.png in Resources */,
+				AF73A02A1A06B8BB00CDC506 /* brick2.png in Resources */,
+				AF739FDF1A06B87800CDC506 /* LaunchScreen.xib in Resources */,
+				AF73A0791A07177800CDC506 /* smw-bg-hills.png in Resources */,
+				AF739FDC1A06B87800CDC506 /* Images.xcassets in Resources */,
+				AF73A0291A06B8BB00CDC506 /* brick.png in Resources */,
+				AF73A0321A06B8BB00CDC506 /* luigi_duck_0.png in Resources */,
+				AF73A0551A06B8BB00CDC506 /* wario_jump_0.png in Resources */,
+				AF73A02C1A06B8BB00CDC506 /* koopa_0.png in Resources */,
+				AF73A0471A06B8BB00CDC506 /* waluigi_attack_0.png in Resources */,
+				AF73A03B1A06B8BB00CDC506 /* mario_duck_0.png in Resources */,
+				AF73A05B1A06B8BB00CDC506 /* wario_run_4.png in Resources */,
+				AF73A0531A06B8BB00CDC506 /* wario_die_0.png in Resources */,
+				AF73A0421A06B8BB00CDC506 /* mario_run_5.png in Resources */,
+				AF73A03F1A06B8BB00CDC506 /* mario_run_2.png in Resources */,
+				AF73A04A1A06B8BB00CDC506 /* waluigi_jump_0.png in Resources */,
+				AF73A0451A06B8BB00CDC506 /* shy_guy_2.png in Resources */,
+				AF73A0311A06B8BB00CDC506 /* luigi_default.png in Resources */,
+				AF73A03A1A06B8BB00CDC506 /* mario_default.png in Resources */,
+				AF73A02E1A06B8BB00CDC506 /* koopa_2.png in Resources */,
+				AF73A03E1A06B8BB00CDC506 /* mario_run_1.png in Resources */,
+				AF73A0541A06B8BB00CDC506 /* wario_duck_0.png in Resources */,
+				AF73A0361A06B8BB00CDC506 /* luigi_run_3.png in Resources */,
+				AF73A04E1A06B8BB00CDC506 /* waluigi_run_3.png in Resources */,
+				AF73A0561A06B8BB00CDC506 /* wario_jump_1.png in Resources */,
+				AF73A0341A06B8BB00CDC506 /* luigi_run_1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF739FE21A06B87800CDC506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF739FC71A06B87700CDC506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF73A06E1A06DD4600CDC506 /* Koopa.m in Sources */,
+				AF73A0671A06B9BA00CDC506 /* Luigi.m in Sources */,
+				AF739FD71A06B87700CDC506 /* ViewController.m in Sources */,
+				AF73A0801A071BFE00CDC506 /* Player.m in Sources */,
+				AF73A06B1A06BA5200CDC506 /* GameView.m in Sources */,
+				AF739FD41A06B87700CDC506 /* AppDelegate.m in Sources */,
+				AF73A0651A06B9BA00CDC506 /* Mario.m in Sources */,
+				AF73A0741A06EE8D00CDC506 /* Tile.m in Sources */,
+				AF73A0711A06EC0F00CDC506 /* ShyGuy.m in Sources */,
+				AF739FD11A06B87700CDC506 /* main.m in Sources */,
+				AF73A0771A06F68400CDC506 /* Brick.m in Sources */,
+				AF73A0681A06B9BA00CDC506 /* Waluigi.m in Sources */,
+				AF73A0661A06B9BA00CDC506 /* Wario.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF739FE01A06B87800CDC506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF739FEB1A06B87800CDC506 /* MERogers_Game2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF739FE61A06B87800CDC506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF739FCA1A06B87700CDC506 /* MERogers_Game2 */;
+			targetProxy = AF739FE51A06B87800CDC506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF739FD81A06B87700CDC506 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF739FD91A06B87700CDC506 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF739FDD1A06B87800CDC506 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF739FDE1A06B87800CDC506 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF739FEC1A06B87800CDC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF739FED1A06B87800CDC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF739FEF1A06B87800CDC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MERogers_Game2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AF739FF01A06B87800CDC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MERogers_Game2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AF739FF21A06B87800CDC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MERogers_Game2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MERogers_Game2.app/MERogers_Game2";
+			};
+			name = Debug;
+		};
+		AF739FF31A06B87800CDC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MERogers_Game2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MERogers_Game2.app/MERogers_Game2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF739FC61A06B87700CDC506 /* Build configuration list for PBXProject "MERogers_Game2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF739FEC1A06B87800CDC506 /* Debug */,
+				AF739FED1A06B87800CDC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF739FEE1A06B87800CDC506 /* Build configuration list for PBXNativeTarget "MERogers_Game2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF739FEF1A06B87800CDC506 /* Debug */,
+				AF739FF01A06B87800CDC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF739FF11A06B87800CDC506 /* Build configuration list for PBXNativeTarget "MERogers_Game2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF739FF21A06B87800CDC506 /* Debug */,
+				AF739FF31A06B87800CDC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF739FC31A06B87700CDC506 /* Project object */;
+}
