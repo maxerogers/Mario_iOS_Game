@@ -10,31 +10,31 @@
 	<string>MERogers_Game2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>569E9BA3845C8C692C9F0A8C2768B43565FA9B54</key>
-		<string>https://github.com/honeycodedbear/Gitten.git</string>
+		<key>6E8312D9234AF6799BB24601C5A4D19E5EB19210</key>
+		<string>https://github.com/honeycodedbear/Mario_iOS_Game.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS/MERogers_Game2/MERogers_Game2.xcodeproj</string>
+	<string>MERogers_Game2.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>569E9BA3845C8C692C9F0A8C2768B43565FA9B54</key>
-		<string>../../../..</string>
+		<key>6E8312D9234AF6799BB24601C5A4D19E5EB19210</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/honeycodedbear/Gitten.git</string>
+	<string>https://github.com/honeycodedbear/Mario_iOS_Game.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>569E9BA3845C8C692C9F0A8C2768B43565FA9B54</string>
+	<string>6E8312D9234AF6799BB24601C5A4D19E5EB19210</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>569E9BA3845C8C692C9F0A8C2768B43565FA9B54</string>
+			<string>6E8312D9234AF6799BB24601C5A4D19E5EB19210</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Dev</string>
+			<string>Mario_iOS_Game</string>
 		</dict>
 	</array>
 </dict>

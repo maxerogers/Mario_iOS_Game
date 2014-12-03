@@ -7,104 +7,155 @@
 //
 
 #import "GameView.h"
+#import "GameOverViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation GameView
 - (void)viewDidLoad {
+    _flag = 10;
     [super viewDidLoad];
-    
-    _score = 0;
-    //Load the background
-    UIImageView *lvl_background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"smw-bg-hills.png"]];
-    lvl_background.frame = CGRectMake(0,0,550*1.30,224*1.30);
-    [self.view addSubview:lvl_background];
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    [self setUpTiles];
-    [NSTimer scheduledTimerWithTimeInterval:0.25f
+    [self setupTiles];
+    [self setupPlayer];
+    [self setupBaddies];
+    [NSTimer scheduledTimerWithTimeInterval:0.5f
                                      target:self selector:@selector(animate:) userInfo:nil repeats:YES];
+    // Construct URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/SuperMarioBros.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
     
-    [self setUpBaddies];
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    //[_audioPlayer play];
+    _score = 0;
     
-    // Added Swipe Gestures
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self  action:@selector(didSwipe:)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
-    
-    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
     [self.view addGestureRecognizer:swipeUp];
     
-    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
-    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
-    [self.view addGestureRecognizer:swipeDown];
-     
+    // Construct URL to sound file
+    NSString *path2 = [NSString stringWithFormat:@"%@/smw_coin.wav", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
+    
+    // Create audio player object and initialize with URL to sound
+    _coinPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
+    
+    // Construct URL to sound file
+    NSString *path3 = [NSString stringWithFormat:@"%@/smw_jump.wav", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
+    
+    // Create audio player object and initialize with URL to sound
+    _jumpPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void) addPlayer:(NSString *)name{
-    _player = [[Player alloc] initWithName:name];
-    [self.view addSubview: _player.avatar];
-    Tile *tile = [_tiles objectAtIndex: 6];
-    [tile addOccupant:_player];
-    [_player addtile: tile];
-}
-
--(void) setUpTiles{
+-(void)setupTiles{
     _tiles = [NSMutableArray array];
-    for(int i=0;i<100;i++){
-        for(int j=0;j<10;j++){
-            //NSLog(@"\n%f %f\n",(float)(i*32.0),(float)(j*32.0));
-            //printf("\n%i %i\n",32*i,32*j);
-            Tile *temp = [[Tile alloc] initWithX:32*i andY:32*(j+2) andW:32 andH:32];
-            if(j == 7){
-                Brick *brick = [[Brick alloc] init];
-                [brick addtile: temp];
-                [temp addOccupant:brick];
+    int numBrickColumns = 12;
+    for(int i=0;i<numBrickColumns;i++){
+        for(int j=0;j<4;j++){
+            
+            Tile *temp = [[Tile alloc] initWithX:i*64 andY:(j+2)*64 andW:64 andH:64];
+            if(j == 2){
+                Brick *brick  = [[Brick alloc] init];
                 [brick changeType:@"grass"];
+                [brick addtile:temp];
+                [temp addOccupant: brick];
+                
                 [self.view addSubview: brick.avatar];
-            }else if(j > 7){
-                Brick *brick = [[Brick alloc] init];
-                [brick addtile: temp];
-                [temp addOccupant:brick];
+            }else if(j == 3){
+                Brick *brick  = [[Brick alloc] init];
                 [brick changeType:@"grass2"];
+                [brick addtile:temp];
+                [temp addOccupant: brick];
                 [self.view addSubview: brick.avatar];
             }
-            [_tiles addObject: temp];
-            [temp linkTiles:_tiles];
-            temp.index = i*10 + j;
+            temp.index = (i*4)+j;
+            [_tiles addObject:temp];
+            temp.tiles = _tiles;
+            //NSLog(@"%d => %d",(i*4)+j, temp.index);
         }
     }
+    //Tile *temp = [_tiles objectAtIndex:(3*4)+3];
+    //NSLog(@"%d => %d",(3*4)+3, temp.index);
 }
 
-- (void) animate:(NSTimer *)timer{
-    int i = 0;
+-(void)addPlayer:(NSString *)name{
+    if([name isEqualToString:@"waluigi"]){
+        _player = [[Player alloc ]initWithName:@"waluigi"];
+    }else if([name isEqualToString:@"wario"]){
+        _player = [[Player alloc ]initWithName:@"wario"];
+    }else if([name isEqualToString:@"luigi"]){
+        _player = [[Player alloc ]initWithName:@"luigi"];
+    }else{
+        _player = [[Player alloc ]initWithName:@"mario"];
+    }
+}
+
+-(void) setupPlayer{
+    Tile *tile = [_tiles objectAtIndex:5];
+    [tile addOccupant:_player];
+    [_player addtile:tile];
+    [self.view addSubview:_player.avatar];
+}
+
+-(void) setupBaddies{
+    Tile *tile = [_tiles objectAtIndex:45];
+    Koopa *koopa = [[Koopa alloc] init];
+    [koopa addtile: tile];
+    [tile addOccupant: koopa];
+    [self.view addSubview:koopa.avatar];
+}
+
+-(void) animate:(NSTimer *)timer{
     for(Tile *tile in _tiles){
+        
+        if(tile.index == 5 && _flag > 0){
+            if([[[tile occupants] firstObject] class] == [Player class] && [[tile occupants] count] > 1){
+                NSLog(@"HIT");
+                if([_player.animation_name isEqualToString:@"jump"]){
+                    NSLog(@"Nice Jump Mario");
+                    _score += 100;
+                    [_coinPlayer play];
+                }else{
+                    //Do Game Over Stuff
+                    [_audioPlayer stop];
+                    
+                    _flag = -10;
+                    
+                    GameOverViewController *gameOverVC = (GameOverViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"GameOverViewController"];
+                    gameOverVC.playerName = _player.character_name;
+                    gameOverVC.score = _score;
+                    [self presentViewController:gameOverVC animated:YES completion:nil];
+                }
+            }
+        }
+        
         [tile animate];
-        //printf("\n%i\n",i);
-        i++;
     }
-    _score++;
+    
+    Tile *temp = [_tiles objectAtIndex:[_tiles count]-2];
+    Brick *brick  = [[Brick alloc] init];
+    [brick changeType:@"grass"];
+    [brick addtile:temp];
+    [temp addOccupant: brick];
+    [self.view addSubview: brick.avatar];
+    
+    temp = [_tiles objectAtIndex:[_tiles count]-1];
+    brick  = [[Brick alloc] init];
+    [brick changeType:@"grass2"];
+    [brick addtile:temp];
+    [temp addOccupant: brick];
+    [self.view addSubview: brick.avatar];
+    
+    _score += 30;
+    
+    if((arc4random() % 16) < 4){
+        [self setupBaddies];
+    }
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d",_score];
 }
 
-- (void) brickFloor{
-    for(int i=0;i<100;i++){
-        UIImageView *dot =[[UIImageView alloc] initWithFrame:CGRectMake(i*35,250,35,35)];
-        dot.image=[UIImage imageNamed:@"brick.png"];
-        [self.view addSubview:dot];
-        [_bricks addObject:dot];
-    }
-}
 
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe{
-    
     if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
         NSLog(@"Swipe Left");
     } else if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
@@ -116,25 +167,16 @@
     } else if (swipe.direction == UISwipeGestureRecognizerDirectionUp) {
         if(_player.animating == false){
             NSLog(@"Swipe Up");
-           // _player.animation_name = @"jump";
-           // _player.animate_cursor = 0;
+             _player.animation_name = @"jump";
+             _player.animate_cursor = 0;
+            [_jumpPlayer play];
         }
     } else if (swipe.direction == UISwipeGestureRecognizerDirectionDown) {
         if(_player.animating == false){
             NSLog(@"Swipe Down");
-           // _player.animation_name = @"duck";
+            // _player.animation_name = @"duck";
         }
     }
 }
-
--(void)setUpBaddies{
-    Koopa *new_koopa = [[Koopa alloc] init];
-    [self.view addSubview: new_koopa.avatar];
-    Tile *tile = [_tiles objectAtIndex: 46];
-    [tile addOccupant:new_koopa];
-    [new_koopa addtile:tile];
-    
-}
-
 
 @end

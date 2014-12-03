@@ -32,19 +32,20 @@
     _avatar.frame = CGRectMake(_tile.x,_tile.y,_tile.width,_tile.height);
 }
 -(void) animate{
-    [UIView animateWithDuration:0.5f animations:^{ _avatar.frame=CGRectMake(_avatar.frame.origin.x-35,_avatar.frame.origin.y,_tile.width,_tile.height);
+    [UIView animateWithDuration:0.5f animations:^{ _avatar.frame=CGRectMake(_avatar.frame.origin.x-64,_avatar.frame.origin.y,_tile.width,_tile.height);
     }];
-    @try {
+    if(_tile.index < 4){
+        //NSLog(@"I am going off screen");
         [_tile.occupants removeObject:self];
-        _tile = [_tile.tiles objectAtIndex:_tile.index-10];
+        _tile = nil;
+        //can't seem to add self back to last tile...so made a hackpatch in animation loop
+        
+    }else{
+        //NSLog(@"WE ARE MOVING %d", _tile.index);
+        [_tile.occupants removeObject:self];
+        _tile = [_tile.tiles  objectAtIndex:_tile.index-4];
         [_tile addOccupant: self];
-    } @catch (NSException *exception) {
-        if([[exception name] isEqualToString:NSRangeException]){
-            //NSLog(@"KILL IT");
-            _tile = nil;
-        }else{
-            NSLog(@"catched error: %@", exception.description);
-        }
+        //NSLog(@"SEE NOW IT IS %d", _tile.index);
     }
 }
 @end

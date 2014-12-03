@@ -63,50 +63,37 @@
     //NSLog(@"DANCE BITCH");
     if([_animation_name isEqualToString:@"run"]){
         if(_animate_cursor == 0){
-            [_avatar setImage: [UIImage imageNamed:@"mario_run_0.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_run_0.png",_character_name]]];
             _animate_cursor = 1;
         }else if(_animate_cursor == 1){
-            [_avatar setImage: [UIImage imageNamed:@"mario_run_1.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_run_1.png",_character_name]]];
             _animate_cursor = 2;
         }else if(_animate_cursor == 2){
-            [_avatar setImage: [UIImage imageNamed:@"mario_run_2.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_run_2.png",_character_name]]];
             _animate_cursor = 3;
         }else if(_animate_cursor == 3){
-            [_avatar setImage: [UIImage imageNamed:@"mario_run_3.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_run_3.png",_character_name]]];
             _animate_cursor = 4;
         }else if(_animate_cursor == 4){
-            [_avatar setImage: [UIImage imageNamed:@"mario_run_4.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_run_4.png",_character_name]]];
             _animate_cursor = 5;
         }else if(_animate_cursor == 5){
-            [_avatar setImage: [UIImage imageNamed:@"mario_run_5.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_run_5.png",_character_name]]];
             _animate_cursor = 0;
         }else{
-            [_avatar setImage: [UIImage imageNamed:@"mario_default.png"]];
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_default.png",_character_name]]];
             _animate_cursor = 0;
         }
     }else if([_animation_name isEqualToString:@"jump"]){
-        if(_animate_cursor < 10 ){
-            _animating = true;
-            [_avatar setImage: [UIImage imageNamed:@"mario_jump_0.png"]];
-            if(_animate_cursor < 5){
-                if(_animate_cursor > 3){
-                    [_avatar setImage: [UIImage imageNamed:@"mario_jump_1.png"]];
-                }else{
-                    [_avatar setImage: [UIImage imageNamed:@"mario_jump_0.png"]];
-                }
-                [UIView animateWithDuration:0.5f animations:^{ _avatar.frame=CGRectMake(_avatar.frame.origin.x,_avatar.frame.origin.y-10,90,90);
+        if(_animate_cursor < 2){
+            [_avatar setImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@_jump_0.png", _character_name]]];
+            //[_avatar setImage: [UIImage imageNamed:@"mario_jump_0.png"]];
+            if(_animate_cursor < 1){
+                [UIView animateWithDuration:1.0f animations:^{ _avatar.frame=CGRectMake(_avatar.frame.origin.x,_avatar.frame.origin.y-64,_tile.width,_tile.height);
                 }];
-            }else if(_animate_cursor >= 5 && _animate_cursor <= 10){
-                if(_animate_cursor < 7){
-                    [_avatar setImage: [UIImage imageNamed:@"mario_jump_1.png"]];
-                }else{
-                    [_avatar setImage: [UIImage imageNamed:@"mario_jump_0.png"]];
-                }
-                
-                [UIView animateWithDuration:0.5f animations:^{ _avatar.frame=CGRectMake(_avatar.frame.origin.x,_avatar.frame.origin.y+10,90,90);
+            }else {
+                [UIView animateWithDuration:1.0f animations:^{ _avatar.frame=CGRectMake(_avatar.frame.origin.x,_avatar.frame.origin.y+64,_tile.width,_tile.height);
                 }];
-            }else{
-                //
             }
             _animate_cursor++;
             NSLog(@"%d",_animate_cursor);

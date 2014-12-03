@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF626A8C1A2E954C00AE12EA /* smw_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF626A8A1A2E954C00AE12EA /* smw_coin.wav */; };
+		AF626A8D1A2E954C00AE12EA /* smw_jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF626A8B1A2E954C00AE12EA /* smw_jump.wav */; };
 		AF739FD11A06B87700CDC506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FD01A06B87700CDC506 /* main.m */; };
 		AF739FD41A06B87700CDC506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FD31A06B87700CDC506 /* AppDelegate.m */; };
 		AF739FD71A06B87700CDC506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF739FD61A06B87700CDC506 /* ViewController.m */; };
@@ -79,6 +81,11 @@
 		AF73A07B1A0719E800CDC506 /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A07A1A0719E800CDC506 /* grass.png */; };
 		AF73A07D1A071A3D00CDC506 /* grass2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF73A07C1A071A3D00CDC506 /* grass2.png */; };
 		AF73A0801A071BFE00CDC506 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73A07F1A071BFE00CDC506 /* Player.m */; };
+		AFB5319C1A2E695B002FD8D4 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5319B1A2E695B002FD8D4 /* GameOverViewController.m */; };
+		AFB5319E1A2E6BE4002FD8D4 /* smb_gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = AFB5319D1A2E6BE4002FD8D4 /* smb_gameover.wav */; };
+		AFB531A01A2E6CC8002FD8D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB5319F1A2E6CC8002FD8D4 /* AudioToolbox.framework */; };
+		AFB531A21A2E6D5B002FD8D4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB531A11A2E6D5B002FD8D4 /* AVFoundation.framework */; };
+		AFB531A71A2E6F2E002FD8D4 /* SuperMarioBros.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB531A61A2E6F2E002FD8D4 /* SuperMarioBros.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF626A8A1A2E954C00AE12EA /* smw_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smw_coin.wav; sourceTree = "<group>"; };
+		AF626A8B1A2E954C00AE12EA /* smw_jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smw_jump.wav; sourceTree = "<group>"; };
 		AF739FCB1A06B87700CDC506 /* MERogers_Game2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MERogers_Game2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF739FCF1A06B87700CDC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF739FD01A06B87700CDC506 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -180,6 +189,12 @@
 		AF73A07C1A071A3D00CDC506 /* grass2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass2.png; sourceTree = "<group>"; };
 		AF73A07E1A071BFE00CDC506 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		AF73A07F1A071BFE00CDC506 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		AFB5319A1A2E695B002FD8D4 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		AFB5319B1A2E695B002FD8D4 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		AFB5319D1A2E6BE4002FD8D4 /* smb_gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = smb_gameover.wav; path = ../smb_gameover.wav; sourceTree = "<group>"; };
+		AFB5319F1A2E6CC8002FD8D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AFB531A11A2E6D5B002FD8D4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AFB531A61A2E6F2E002FD8D4 /* SuperMarioBros.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SuperMarioBros.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +202,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB531A21A2E6D5B002FD8D4 /* AVFoundation.framework in Frameworks */,
+				AFB531A01A2E6CC8002FD8D4 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +220,8 @@
 		AF739FC21A06B87700CDC506 = {
 			isa = PBXGroup;
 			children = (
+				AFB531A11A2E6D5B002FD8D4 /* AVFoundation.framework */,
+				AFB5319F1A2E6CC8002FD8D4 /* AudioToolbox.framework */,
 				AF739FF41A06B87C00CDC506 /* Resources */,
 				AF739FCD1A06B87700CDC506 /* MERogers_Game2 */,
 				AF739FE71A06B87800CDC506 /* MERogers_Game2Tests */,
@@ -222,6 +241,7 @@
 		AF739FCD1A06B87700CDC506 /* MERogers_Game2 */ = {
 			isa = PBXGroup;
 			children = (
+				AFB531A31A2E6E44002FD8D4 /* Sounds */,
 				AF73A07E1A071BFE00CDC506 /* Player.h */,
 				AF73A07F1A071BFE00CDC506 /* Player.m */,
 				AF73A0691A06BA5200CDC506 /* GameView.h */,
@@ -247,6 +267,8 @@
 				AF739FD51A06B87700CDC506 /* ViewController.h */,
 				AF739FD61A06B87700CDC506 /* ViewController.m */,
 				AF739FD81A06B87700CDC506 /* Main.storyboard */,
+				AFB5319A1A2E695B002FD8D4 /* GameOverViewController.h */,
+				AFB5319B1A2E695B002FD8D4 /* GameOverViewController.m */,
 				AF739FDB1A06B87800CDC506 /* Images.xcassets */,
 				AF739FDD1A06B87800CDC506 /* LaunchScreen.xib */,
 				AF739FCE1A06B87700CDC506 /* Supporting Files */,
@@ -340,6 +362,17 @@
 				AF73A0281A06B8BB00CDC506 /* wario_run_5.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		AFB531A31A2E6E44002FD8D4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AFB5319D1A2E6BE4002FD8D4 /* smb_gameover.wav */,
+				AFB531A61A2E6F2E002FD8D4 /* SuperMarioBros.mp3 */,
+				AF626A8A1A2E954C00AE12EA /* smw_coin.wav */,
+				AF626A8B1A2E954C00AE12EA /* smw_jump.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,13 +469,16 @@
 				AF73A03C1A06B8BB00CDC506 /* mario_jump_0.png in Resources */,
 				AF739FDA1A06B87700CDC506 /* Main.storyboard in Resources */,
 				AF73A0391A06B8BB00CDC506 /* mario_attack_0.png in Resources */,
+				AF626A8D1A2E954C00AE12EA /* smw_jump.wav in Resources */,
 				AF73A0521A06B8BB00CDC506 /* wario_default.png in Resources */,
 				AF73A07D1A071A3D00CDC506 /* grass2.png in Resources */,
 				AF73A0461A06B8BB00CDC506 /* shy_guy_3.png in Resources */,
+				AFB531A71A2E6F2E002FD8D4 /* SuperMarioBros.mp3 in Resources */,
 				AF73A0401A06B8BB00CDC506 /* mario_run_3.png in Resources */,
 				AF73A03D1A06B8BB00CDC506 /* mario_run_0.png in Resources */,
 				AF73A05A1A06B8BB00CDC506 /* wario_run_3.png in Resources */,
 				AF73A02F1A06B8BB00CDC506 /* koopa_3.png in Resources */,
+				AFB5319E1A2E6BE4002FD8D4 /* smb_gameover.wav in Resources */,
 				AF73A0301A06B8BB00CDC506 /* luigi_attack_0.png in Resources */,
 				AF73A0381A06B8BB00CDC506 /* luigi_run_5.png in Resources */,
 				AF73A0511A06B8BB00CDC506 /* wario_attack_0.png in Resources */,
@@ -452,6 +488,7 @@
 				AF73A04C1A06B8BB00CDC506 /* waluigi_run_1.png in Resources */,
 				AF73A0431A06B8BB00CDC506 /* shy_guy_0.png in Resources */,
 				AF73A04D1A06B8BB00CDC506 /* waluigi_run_2.png in Resources */,
+				AF626A8C1A2E954C00AE12EA /* smw_coin.wav in Resources */,
 				AF73A0331A06B8BB00CDC506 /* luigi_run_0.png in Resources */,
 				AF73A05C1A06B8BB00CDC506 /* wario_run_5.png in Resources */,
 				AF73A0481A06B8BB00CDC506 /* waluigi_default.png in Resources */,
@@ -501,6 +538,7 @@
 				AF73A0671A06B9BA00CDC506 /* Luigi.m in Sources */,
 				AF739FD71A06B87700CDC506 /* ViewController.m in Sources */,
 				AF73A0801A071BFE00CDC506 /* Player.m in Sources */,
+				AFB5319C1A2E695B002FD8D4 /* GameOverViewController.m in Sources */,
 				AF73A06B1A06BA5200CDC506 /* GameView.m in Sources */,
 				AF739FD41A06B87700CDC506 /* AppDelegate.m in Sources */,
 				AF73A0651A06B9BA00CDC506 /* Mario.m in Sources */,

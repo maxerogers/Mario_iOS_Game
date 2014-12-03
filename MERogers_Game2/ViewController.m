@@ -74,16 +74,25 @@
 
 -(void)warioSelected{
     NSLog(@"\nWario Selected");
+    GameView *gameView = (GameView *)[self.storyboard instantiateViewControllerWithIdentifier:@"GameView"];
+    [gameView addPlayer:@"wario"];
+    [self presentViewController:gameView animated:YES completion:nil];
     
 }
 
 -(void)luigiSelected{
     NSLog(@"\nLugi Selected");
+    GameView *gameView = (GameView *)[self.storyboard instantiateViewControllerWithIdentifier:@"GameView"];
+    [gameView addPlayer:@"luigi"];
+    [self presentViewController:gameView animated:YES completion:nil];
     
 }
 
 -(void)waluigiSelected{
     NSLog(@"\nWaluigi Selected");
+    GameView *gameView = (GameView *)[self.storyboard instantiateViewControllerWithIdentifier:@"GameView"];
+    [gameView addPlayer:@"waluigi"];
+    [self presentViewController:gameView animated:YES completion:nil];
     
 }
 

@@ -15,6 +15,8 @@
 #import "Tile.h"
 #import "Brick.h"
 #import "Player.h"
+#import <AVFoundation/AVFoundation.h>
+
 @interface GameView : UIViewController
 @property NSMutableArray *bricks;
 @property NSMutableArray *koopas;
@@ -26,5 +28,11 @@
 @property Luigi *luigi;
 @property Player *player;
 @property int score;
+@property int flag;
+@property AVAudioPlayer *audioPlayer;
+@property AVAudioPlayer *coinPlayer;
+@property AVAudioPlayer *jumpPlayer;
+@property IBOutlet UILabel *scoreLabel;
+
 -(void) addPlayer:(NSString *)name;
 @end
